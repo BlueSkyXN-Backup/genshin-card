@@ -40,4 +40,4 @@ https://www.himiku.com/archives/genshin-impact-card.html
 ## 仓库代码
 https://github.com/journey-ad/genshin-impact-card
 
-https://github.com/BlueSkyXN-Backup/genshin-impact-card
+https://github.com/BlueSkyXN-Backup/genshin-card

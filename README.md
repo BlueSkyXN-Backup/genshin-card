@@ -1,5 +1,5 @@
 # genshin-impact-card
-genshin-impact-card 备份包 接口已失效，项目作废
+genshin-impact-card 备份包
 
 # 说明
 原作者被封，我fork的仓库在上一次清洗的时候删除了

@@ -15,17 +15,17 @@ const __API = {
 }
 
 const HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) miHoYoBBS/2.4.0',
+  'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) miHoYoBBS/2.7.0',
   'Referer': 'https://webstatic.mihoyo.com/',
   'Cookie': process.env.COOKIE,
-  'x-rpc-app_version': '2.3.0',
-  'x-rpc-client_type': 5,
+  'x-rpc-app_version': '2.7.0',
+  'x-rpc-client_type': 5, // web
   'DS': ''
 }
 
 const getDS = () => {
-  // v2.3.0-web
-  n = 'h8w582wxwgqvahcdkpvdhbh2w9casgfl'
+  // v2.7.0 - from app
+  n = '14bmu1mz0yuljprsfgpvjh3ju2ni468r'
   i = Date.now() / 1000 | 0
   r = util.randomStr(6)
   c = md5(`salt=${n}&t=${i}&r=${r}`)

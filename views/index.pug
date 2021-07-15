@@ -5,14 +5,15 @@ html
     link(rel='icon', type='image/png', href='favicon.png')
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css')
     link(rel='stylesheet', href='style.css')
+    <script async defer data-website-id="520b7c91-e3ff-47ef-bd64-63106a802fbe" src="https://analytics.zui.moe/umami.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    script(async, src='https://www.googletagmanager.com/gtag/js?id=G-KMMF9FTYBX')
+    script(async, src='https://www.googletagmanager.com/gtag/js?id=G-GMKHKTBX6K')
     script.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-KMMF9FTYBX');
+      gtag('config', 'G-GMKHKTBX6K');
 
       function _evt_push(type, category, label){
         gtag('event', type, {
@@ -22,38 +23,49 @@ html
       }
 
   body
+
+    img(src='https://count.himiku.com/get/@genshin-card?theme=rule34' alt='原神玩家信息卡片生成工具')
+
     h3 使用方法:
 
     h5 SVG 地址
-    code https://genshin-card.getloli.com/{背景编号}/{米游社ID}.png
+    code https://genshin-card.himiku.com/{背景编号}/{米游社ID}.png
 
     h5 Img 标签
-    code &lt;img src="https://genshin-card.getloli.com/{背景编号}/{米游社ID}.png" alt="genshin-card" />
+    code &lt;img src="https://genshin-card.himiku.com/{背景编号}/{米游社ID}.png" alt="genshin-card" />
 
     h5 BBCode
-    code [img]https://genshin-card.getloli.com/{背景编号}/{米游社ID}.png[/img]
+    code [img]https://genshin-card.himiku.com/{背景编号}/{米游社ID}.png[/img]
 
     h5 Markdown
-    code ![](https://genshin-card.getloli.com/{背景编号}/{米游社ID}.png)
+    code ![](https://genshin-card.himiku.com/{背景编号}/{米游社ID}.png)
+
+    h3 背景编号
+    h5 <code>rand</code> 随机背景
+    h5 指定随机范围
+    pre.
+      2,5,9 -> [2, 5, 9]
+      3-5 -> [3, 4, 5]
+      3-5,7,9,12-15 -> [3, 4, 5, 7, 9, 12, 13, 14, 15]
 
     h3 示例:
-    img(src="https://genshin-card.getloli.com/2/160596100.png" alt="示例图片")
+    img(src="https://genshin-card.himiku.com/rand/5680906.png" alt="示例图片")
 
     details
       summary(style='display: inline-block;', onclick='_evt_push("click", "normal", "more_theme")')
         h5(style='display: inline-block; cursor: pointer;') 探索度
 
       p 由于配额限制，带有探索度和宝箱数量的图片地址路由使用以下形式：
-      code https://genshin-card.getloli.com/detail/{背景编号}/{米游社ID}.png
-      img(src="https://genshin-card.getloli.com/detail/4/160596100.png" alt="示例图片")
+      code https://genshin-card.himiku.com/detail/{背景编号}/{米游社ID}.png
+      img(src="https://genshin-card.himiku.com/detail/4/5680906.png" alt="示例图片")
 
     details
       summary(style='display: inline-block;', onclick='_evt_push("click", "normal", "more_theme")')
         h3(style='display: inline-block; cursor: pointer;') 所有背景
       p(style='margin: 0;') 替换地址中的背景编号为想要的即可（可以右键点击在新标签页打开查看图片地址）
-      p 目前共有<code>0 - 26</code>共 27 张背景图片
-      each _, i in Array(27)
-        img(src='https://genshin-card.getloli.com/' + i + '/160596100.png')
+      p 目前共有<code>0 - 39</code>共 40 张背景图片
+      each _, i in Array(40)
+        img(src='https://genshin-card.himiku.com/' + i + '/5680906.png')
 
     h3 Credits
     ul
@@ -79,7 +91,7 @@ html
 
     h3 Tool
     .tool
-      code https://genshin-card.getloli.com
+      code https://genshin-card.himiku.com
       input#bgIdx(type='text', value='0', style='display: inline-block; width: 40px; height: 1.4em; line-height: 1.4em; margin: 0 4px; vertical-align: middle;')
       code /
       input#uid(type='text', placeholder='米游社ID', style='display: inline-block; width: 120px; height: 1.4em; line-height: 1.4em; margin: 0 4px; vertical-align: middle;')
@@ -101,10 +113,11 @@ html
             return
           }
 
-          img.src = 'https://genshin-card.getloli.com/' + bgIdx + '/' + uid + '.png'
+          img.src = 'https://genshin-card.himiku.com/' + bgIdx + '/' + uid + '.png'
         })
-
-    iframe(src="https://chat.getloli.com/room/@genshin-impact-card?title=%E5%8E%9F%E7%A5%9E%E7%8E%A9%E5%AE%B6%E4%BF%A1%E6%81%AF%E5%8D%A1%E7%89%87%E7%9A%84%E7%95%99%E8%A8%80%E6%9D%BF", scrolling="no", frameborder="0", height="70%", width="26%", style="position: fixed;top: 2%;right: 5%;")
+        
 
     p.copy
-      a(href='https://github.com/journey-ad/genshin-impact-card', target='_blank', onclick='_evt_push("click", "normal", "go_github")') source code
+      a(href='https://github.com/journey-ad/genshin-impact-card', target='_blank', onclick='_evt_push("click", "normal", "go_github")') Github源码 · 
+
+      a(href='https://www.himiku.com/archives/genshin-impact-card.html', target='_blank', onclick='_evt_push("click", "normal", "go_blog")') 初之音

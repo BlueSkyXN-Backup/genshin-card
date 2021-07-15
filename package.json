@@ -1,0 +1,29 @@
+{
+  "name": "genshin-impact-card",
+  "version": "1.0.0",
+  "description": "genshin impact user info card",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js",
+    "dev": "LOG_LEVEL=debug node index.js | ./node_modules/.bin/pino-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "journey-ad",
+  "license": "MIT",
+  "dependencies": {
+    "b3b": "0.0.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "fontmin": "^0.9.8",
+    "md5": "^2.3.0",
+    "mime-types": "^2.1.28",
+    "node-cache": "^5.1.2",
+    "pino": "^6.10.0",
+    "pug": "^3.0.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "pino-pretty": "^4.3.0"
+  }
+}

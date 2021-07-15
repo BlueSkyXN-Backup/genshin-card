@@ -33,7 +33,7 @@ https://www.himiku.com/archives/genshin-impact-card.html
 ## 部署实例
 【我自己的，已停运】https://ys.000714.xyz/
 
-【原作者】https://genshin-card.getloli.com/
+【原作者,挂了】https://genshin-card.getloli.com/
 
 【其他博主，可用】https://genshin-card.himiku.com/
 

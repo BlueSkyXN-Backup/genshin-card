@@ -3,6 +3,7 @@ const pino = require('pino');
 const NodeCache = require("node-cache")
 const http = require('./utils/http')
 const util = require('./utils/index')
+const UserCookie = require('./cookie.json')
 
 const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
 
@@ -17,7 +18,7 @@ const __API = {
 const HEADERS = {
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) miHoYoBBS/2.7.0',
   'Referer': 'https://webstatic.mihoyo.com/',
-  'Cookie': process.env.COOKIE,
+  'Cookie': UserCookie.COOKIE,
   'x-rpc-app_version': '2.7.0',
   'x-rpc-client_type': 5, // web
   'DS': ''
